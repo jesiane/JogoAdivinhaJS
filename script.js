@@ -12,27 +12,20 @@ function aleatorio(x){
         if (input.value == ""){
             alert("Cadê o palpite");
         }
+        else if(input.value == "0"){
+            alert("Esse não vale, hein")
+        }
         else if(input.value == secret){
             alert("Acertou,\nParabéns 🎉 " + secret);           
         }
         else if(secret>input.value){
-        alert("Errou!!!\n\n O numero é maior");
+            alert("Errou!!!\n\n O numero é maior");
         }
         else if(secret<input.value){
-        alert("Errou!!!\n\n O numero é menor");
+            alert("Errou!!!\n\n O numero é menor");
         }
     }
-
-    function Validar(){
-
-        var num = document.getElementById("numero");
-
-        if (num.value == ""){
-            alert ("Palpite");
-
-            num.focus();
-        }
-    }
+        
     var button = document.querySelector("button");
 
     button.onclick = verifica;
